@@ -64,6 +64,9 @@ if [[ -d $(brew --prefix) ]]; then
     export LDFLAGS="-L/opt/homebrew/opt/util-linux/lib"
     export CPPFLAGS="-I/opt/homebrew/opt/util-linux/include"
 
+    # latex
+    export PATH="/Library/TeX/texbin:$PATH"
+
     #virtualenv and virtualenvwrapper (mac)
     if [ -d $HOME/.virtualenvs ]; then
         export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3

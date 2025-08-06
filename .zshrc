@@ -119,7 +119,6 @@ source $ZSH/oh-my-zsh.sh
 # Ixaya SVN
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:~/.bin
-export SVN_EDITOR=vim
 
 
 
@@ -146,6 +145,16 @@ if [[ -L $HOME/.zshrc  &&  -e $HOME/.zshrc ]]; then
         echo "Could not find file to $ALIASES_PATH"
     fi
 
+    # check if ssh_agent.sh exists
+    SSH_AGENT_PATH=$DIR_PATH/.ssh_agent.sh
+    if [[ -f  $SSH_AGENT_PATH ]]; then
+        . $SSH_AGENT_PATH
+    else
+        echo "Could not find file to $SSH_AGENT_PATH"
+    fi
+
+
+
 
     # check if brew is installed (mac)
     if [[ -d $(brew --prefix) ]]; then
@@ -165,3 +174,6 @@ if [[ -L $HOME/.zshrc  &&  -e $HOME/.zshrc ]]; then
 else
     echo "Could not find link to $HOME/.zshrc"
 fi
+export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
+
+export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/MacOs/bin
