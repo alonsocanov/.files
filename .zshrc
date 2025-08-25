@@ -146,12 +146,12 @@ if [[ -L $HOME/.zshrc  &&  -e $HOME/.zshrc ]]; then
     fi
 
     # check if ssh_agent.sh exists
-    SSH_AGENT_PATH=$DIR_PATH/.ssh_agent.sh
-    if [[ -f  $SSH_AGENT_PATH ]]; then
-        . $SSH_AGENT_PATH
-    else
-        echo "Could not find file to $SSH_AGENT_PATH"
-    fi
+    # SSH_AGENT_PATH=$DIR_PATH/.ssh_agent.sh
+    # if [[ -f  $SSH_AGENT_PATH ]]; then
+    #     . $SSH_AGENT_PATH
+    # else
+    #     echo "Could not find file to $SSH_AGENT_PATH"
+    # fi
 
 
 
