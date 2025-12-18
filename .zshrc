@@ -176,4 +176,3 @@ else
 fi
 export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
 
-export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/MacOs/bin
